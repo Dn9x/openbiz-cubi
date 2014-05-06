@@ -1,0 +1,10 @@
+尊敬的<%= name %><% if(title=='Ms.'){ var sex='小姐'; %><%=sex%><%}else{ var sex='先生';%><%=sex%><%}%>，您好！<br/>
+    <p>
+    <%= company %>公司邀请您加入公司信息化系统，邀请码为：<label style="color:blue;"><%= token %></label><br/>
+    如果您已经在vogdata.com注册用户，请直接点下面的链接进入，登陆并选择加入已经有的公司选项，输入邀请码完成邀请；<br/>
+    <a target="_blank" href="http://vogdata.com:8080/#!/user/login">http://vogdata.com:8080/#!/user/login</a><br/>
+    如果您还没有在vogdata.com注册用户，请点击下面链接注册完成后，登陆并选择加入已经有的公司选项，输入邀请码完成邀请。<br/>
+    <a target="_blank" href="http://vogdata.com:8080/#!/user/register">http://vogdata.com:8080/#!/user/register</a><br/>
+	</p>
+
+    本注册码不得泄露，如有疑问，请联系您所在的公司系统管理员或vogdata团队，我们将竭诚为您服务。

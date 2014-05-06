@@ -130,6 +130,7 @@ module.exports = function(app){
 						}
 						else
 						{
+							app.getController("NotificationController").sendInviteMail(req, res);
 							res.json(201,{token:token});
 						}
 					});					
