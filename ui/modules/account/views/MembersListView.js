@@ -91,7 +91,6 @@ define(['text!templates/account/membersListView.html',
 	        $(this.el).html(this.template(this.locale));
 	        $(window).off('resize');
         	openbiz.ui.update($(this.el));
-        	debugger;
 			this.renderDataGrid();
  	        return this;
 	    },

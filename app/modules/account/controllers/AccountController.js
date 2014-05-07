@@ -196,14 +196,30 @@ module.exports = function(app){
 				}
 			}
 		},
+		ensureExists:function(req,res,next){
+			if(req.params.id === req.user.id){
+				req.currentUser = req.user;
+				next();
+			}
+			else{
+				var userModel = app.getModel.call(app,'User');	
+				userModel.findById(req.params.id,function(err,user){
+					if(err){
+						res.json(500,{error:err});
+					}else if(user){
+						req.currentUser = user;
+						next();
+					}
+					else{
+						res.send(404);
+					}
+				});
+			}
+		},
 		updateUserRoles:function(req,res)
 		{
-			req.user.roles = req.body.roles;
-			
- 			console.log("new roles" );
- 			console.log(req.body.roles);
- 			
-			req.user.save(function(err,user){
+			req.currentUser.roles = req.body.roles;
+			req.currentUser.save(function(err,user){
 				if(err){
 					res.send(500,{error:err})
 				}

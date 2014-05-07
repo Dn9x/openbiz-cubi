@@ -25,6 +25,7 @@ define(['text!templates/account/membersNewView.html',
 				return this;
 			},
 			saveRecord:function(event){
+				debugger;
 				event.preventDefault();
 				var self = this;
 				if(!this._validateForm())return;

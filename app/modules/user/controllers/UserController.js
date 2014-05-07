@@ -16,6 +16,7 @@ module.exports = function(app){
             user.username = req.body.username;
             user.password = app.getModel.call(app,'User').encryptPassword(req.body.password);
             user.contact = contact.id;
+            user.account = req.user.account.id;
             user.roles.push('cubi-user');
 
             contact.save(function(err){
