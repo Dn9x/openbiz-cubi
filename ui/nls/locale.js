@@ -104,7 +104,11 @@ define({
                 fieldRole:"Role",
                 fieldAction:"Action",
                 recordActionEdit:"Edit",
-                recordActionRemove:"Remove"
+                recordActionRemove:"Remove",
+                deleteTitle:"Data delete confirmation",
+                deleteMessage1: "You are about to delete this user <strong>",
+                deleteMessage2: "</strong> <br/> Are you sure?",
+                deleteSelf: "You cannot delete yourself from account"
 	        },
             membersNewView:{
                 viewTitle: 'Add a New Member',

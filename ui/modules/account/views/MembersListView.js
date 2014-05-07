@@ -91,6 +91,7 @@ define(['text!templates/account/membersListView.html',
 	        $(this.el).html(this.template(this.locale));
 	        $(window).off('resize');
         	openbiz.ui.update($(this.el));
+        	debugger;
 			this.renderDataGrid();
  	        return this;
 	    },
@@ -126,9 +127,8 @@ define(['text!templates/account/membersListView.html',
 			}
 			var name = self.collection.get(recordId).get("user").contact.name.displayName;
 			bootbox.confirm({
-				title:"Data delete confirmation",
-				message:" You are about to delete this user <strong>"+name +"</strong> <br/> \
-	    				Are you sure?",
+				title: this.locale.deleteTitle,
+				message:this.locale.deleteMessage1+name +this.locale.deleteMessage2,
 				callback:function(result){
 					if(result){
 						self.collection.get(recordId).destroy({success:function(){

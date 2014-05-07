@@ -105,6 +105,10 @@ define({
                 fieldAction:"操作",
                 recordActionEdit:"编辑",
                 recordActionRemove:"删除",
+                deleteTitle:"确认删除用户",
+                deleteMessage1: "你正在删除用户：<strong>",
+                deleteMessage2: "</strong> <br/> 确定删除?",
+                deleteSelf: "你不能删除自己的账户"
             },
             membersNewView:{
                 viewTitle: '添加新用户',

@@ -199,6 +199,10 @@ module.exports = function(app){
 		updateUserRoles:function(req,res)
 		{
 			req.user.roles = req.body.roles;
+			
+ 			console.log("new roles" );
+ 			console.log(req.body.roles);
+ 			
 			req.user.save(function(err,user){
 				if(err){
 					res.send(500,{error:err})

@@ -8,7 +8,7 @@ module.exports = function(app)
         versionKey: false,
         collection: 'cubi.user'
     });
-
+    
     schema.methods.hasPermission = function(permission,openbiz)
     {
         if(this.roles.length)

@@ -25,3 +25,9 @@ script(type="text/template",id="action-column-template")
 				|&nbsp; <%= recordActionEdit %> &nbsp;
 			span.visible-xs
 				i.fa.fa-edit
+		a.btn.btn-default.btn-sm.btn-record-delete(href!="#",record-id!='{{ id }}',style="margin-right:5px;")
+			span.hidden-xs
+				i.fa.fa-edit
+				|&nbsp; <%= recordActionRemove %> &nbsp;
+			span.visible-xs
+				i.fa.fa-edit
